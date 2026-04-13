@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Spawn vllmpunch (Python CLI) from the same directory as this script.
+set -euo pipefail
+_VLLMPUNCH_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+exec python3 "${_VLLMPUNCH_ROOT}/vllmpunch.py" "$@"

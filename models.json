@@ -1,0 +1,39 @@
+{
+  "models": {
+    "llama": {
+      "model_id": "RedHatAI/Llama-3.2-1B-Instruct-FP8",
+      "cache_dir": "./rhaiis-cache",
+      "host_port": 8001,
+      "shm_size": "4g",
+      "container_name": "vllm-llama"
+    },
+    "qwen3": {
+      "model_id": "Qwen/Qwen3-1.7B",
+      "cache_dir": "./rhaiis1-cache",
+      "host_port": 8002,
+      "shm_size": "6g",
+      "container_name": "vllm-qwen3-1.7"
+    },
+    "granite4-1b-speech": {
+      "model_id": "ibm-granite/granite-4.0-1b-speech",
+      "cache_dir": "./rhaiis1-cache",
+      "host_port": 8001,
+      "shm_size": "6g",
+      "container_name": "granite4-1b-speec"
+    },
+    "granite4-1b-speech": {
+      "model_id": "ibm-granite/granite-4.0-1b-speech",
+      "cache_dir": "./rhaiis1-cache",
+      "host_port": 8001,
+      "shm_size": "6g",
+      "container_name": "granite4-1b-speec"
+    },
+    "qwen3-tts-1.7-custom": {
+      "model_id": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+      "cache_dir": "./rhaiis1-cache",
+      "host_port": 8001,
+      "shm_size": "6g",
+      "container_name": "Qwen3-TTS-12Hz-1.7B-CustomVoice"
+    }
+  }
+}
