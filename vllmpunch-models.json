@@ -1,0 +1,116 @@
+{
+  "models": {
+    "DeepSeek-R1-Distill-Llama-8B": {
+      "alias": "r1-8b",
+      "cache_dir": "./rhaiis-cache",
+      "container_name": "vllm-deepseek-r1-8b-fp8",
+      "host_port": 8011,
+      "model_id": "neuralmagic/DeepSeek-R1-Distill-Llama-8B-FP8",
+      "shm_size": "4g",
+      "vllm_flags": {
+        "enforce_eager": true,
+        "gpu_memory_utilization": 0.85,
+        "max_model_len": 8192
+      }
+    },
+    "DeepSeek-V3-Distill-Llama-8B": {
+      "alias": "dsv3",
+      "cache_dir": "./rhaiis-cache",
+      "container_name": "vllm-deepseek-v3-distill-8b",
+      "host_port": 8014,
+      "model_id": "deepseek-ai/DeepSeek-V3-Distill-Llama-8B",
+      "shm_size": "4g",
+      "vllm_flags": {
+        "enforce_eager": true,
+        "gpu_memory_utilization": 0.75,
+        "max_model_len": 8192
+      }
+    },
+    "Mistral-NeMo-Instruct-2407-FP8": {
+      "alias": "nemo12",
+      "cache_dir": "./rhaiis-cache",
+      "container_name": "vllm-mistral-nemo-fp8",
+      "host_port": 8012,
+      "model_id": "neuralmagic/Mistral-NeMo-Instruct-2407-FP8",
+      "shm_size": "4g",
+      "vllm_flags": {
+        "gpu_memory_utilization": 0.9,
+        "kv_cache_dtype": "fp8",
+        "max_model_len": 10240
+      }
+    },
+    "Nemotron-3-Nano-Omni-FP8": {
+      "alias": "nemotron-nano",
+      "cache_dir": "./rhaiis-cache",
+      "container_name": "vllm-nemotron-3-nano-omni-fp8",
+      "container_port": 8002,
+      "host_port": 8002,
+      "model_id": "nvidia/Nemotron-3-Nano-Omni-FP8",
+      "shm_size": "4g",
+      "vllm_flags": {
+        "gpu_memory_utilization": 0.3,
+        "max_model_len": 4096,
+        "serve_port": 8002,
+        "trust_remote_code": true
+      }
+    },
+    "Phi-4-mini-instruct": {
+      "alias": "phi4",
+      "cache_dir": "./rhaiis-cache",
+      "container_name": "vllm-phi4-mini",
+      "host_port": 8003,
+      "model_id": "microsoft/Phi-4-mini-instruct",
+      "shm_size": "4g",
+      "vllm_flags": {
+        "gpu_memory_utilization": 0.7,
+        "max_model_len": 4096,
+        "trust_remote_code": true
+      }
+    },
+    "Qwen3-1.5B-Coder-Instruct-FP8": {
+      "alias": "qwen-coder",
+      "cache_dir": "./rhaiis-cache",
+      "container_name": "vllm-qwen3-1.5b-coder-fp8",
+      "container_port": 8001,
+      "host_port": 8001,
+      "model_id": "neuralmagic/Qwen3-1.5B-Coder-Instruct-FP8",
+      "shm_size": "4g",
+      "vllm_flags": {
+        "enforce_eager": true,
+        "gpu_memory_utilization": 0.3,
+        "max_model_len": 4096,
+        "serve_port": 8001
+      }
+    },
+    "granite4-1b-speech": {
+      "cache_dir": "./rhaiis1-cache",
+      "container_name": "granite4-1b-speec",
+      "host_port": 8017,
+      "model_id": "ibm-granite/granite-4.0-1b-speech",
+      "shm_size": "6g"
+    },
+    "llama": {
+      "alias": "orchestrator",
+      "cache_dir": "./rhaiis-cache",
+      "container_name": "vllm-llama",
+      "container_port": 8000,
+      "host_port": 8000,
+      "model_id": "RedHatAI/Llama-3.2-1B-Instruct-FP8",
+      "shm_size": "4g"
+    },
+    "qwen3": {
+      "cache_dir": "./rhaiis1-cache",
+      "container_name": "vllm-qwen3-1.7",
+      "host_port": 8016,
+      "model_id": "Qwen/Qwen3-1.7B",
+      "shm_size": "6g"
+    },
+    "qwen3-tts-1.7-custom": {
+      "cache_dir": "./rhaiis1-cache",
+      "container_name": "Qwen3-TTS-12Hz-1.7B-CustomVoice",
+      "host_port": 8018,
+      "model_id": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+      "shm_size": "6g"
+    }
+  }
+}

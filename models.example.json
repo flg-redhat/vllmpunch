@@ -1,11 +1,17 @@
 {
   "models": {
     "llama": {
+      "alias": "small",
       "model_id": "RedHatAI/Llama-3.2-1B-Instruct-FP8",
       "cache_dir": "./rhaiis-cache",
       "host_port": 8001,
       "shm_size": "4g",
-      "container_name": "vllm-llama"
+      "container_name": "vllm-llama",
+      "vllm_flags": {
+        "max_model_len": 4096,
+        "gpu_memory_utilization": 0.85
+      },
+      "extra_vllm_args": []
     },
     "qwen3": {
       "model_id": "Qwen/Qwen3-1.7B",
